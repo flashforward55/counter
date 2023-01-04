@@ -1,5 +1,6 @@
-const input = document.getElementById('input');
-
-function updateCounter(counter) {
-	input.value = counter;
-}
+export default {
+	input: document.getElementById('input'),
+	updateCounter: function (data) {
+		this.input.value = data;
+	},
+};

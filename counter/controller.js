@@ -1,20 +1,21 @@
+import model from './model.js';
+import view from './view.js';
+
 const btnMinus = document.getElementById('btnMinus');
 const btnReset = document.getElementById('btnReset');
 const btnPlus = document.getElementById('btnPlus');
 
-updateCounter(counter);
-
 btnPlus.addEventListener('click', () => {
-	increase();
-	updateCounter(counter);
+	model.increase();
+	view.updateCounter(model.counter);
 });
 
 btnMinus.addEventListener('click', () => {
-	decrease();
-	updateCounter(counter);
+	model.decrease();
+	view.updateCounter(model.counter);
 });
 
 btnReset.addEventListener('click', () => {
-	reset();
-	updateCounter(counter);
+	model.reset();
+	view.updateCounter(model.counter);
 });
