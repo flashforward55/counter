@@ -1,6 +1,16 @@
-export default {
-	input: document.getElementById('input'),
-	updateCounter: function (data) {
-		this.input.value = data;
-	},
-};
+export default class View {
+    constructor(value) {
+        this.input = document.getElementById('input');
+        this.updateCounter(value);
+    }
+
+    elements = {
+        btnMinus: document.getElementById('btnMinus'),
+        btnReset: document.getElementById('btnReset'),
+        btnPlus: document.getElementById('btnPlus'),
+    };
+
+    updateCounter(data) {
+        this.input.value = data;
+    }
+}
